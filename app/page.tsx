@@ -1,6 +1,16 @@
+"use client";
+
+import { useState } from "react";
+
 import { SearchBar, Phone, Lists } from "@/components/index";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const onSearch = (query: string) => {
+    setSearchQuery(query);
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <Phone>
@@ -10,8 +20,8 @@ export default function Home() {
           </header>
         </div>
         <section className="">
-          <SearchBar />
-          <Lists />
+          <SearchBar onSearchQuery={onSearch} />
+          <Lists searchQuery={searchQuery} />
         </section>
       </Phone>
     </main>
