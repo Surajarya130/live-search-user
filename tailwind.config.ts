@@ -8,7 +8,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  eslint: {
+  typescript: {
     ignoreDuringBuilds: true,
   },
   prefix: "",
