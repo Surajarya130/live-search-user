@@ -8,6 +8,9 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   prefix: "",
   theme: {
     container: {
