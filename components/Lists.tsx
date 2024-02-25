@@ -40,9 +40,14 @@ const Lists: React.FC<SearchQueryProps> = ({ searchQuery }) => {
   }, []);
 
   useEffect(() => {
-    if (users.length > 0) {
+    // Commenting below code, because the api works so quick that the animation was not quite visible. Adding a setTimeout for 1.5 sec to visible the animation
+    // if (users.length > 0) {
+    //   setLoading(false);
+    // }
+
+    setTimeout(() => {
       setLoading(false);
-    }
+    }, 1500);
   }, [users]);
 
   const refreshData = users.filter((item) => {
